@@ -16,7 +16,7 @@
         "patch": 0
       }
     },
-    "timestamp": "2018-02-08T16:27:18+11:00"
+    "timestamp": "2018-02-08T18:00:04+11:00"
   },
   "software": {
     "base": {
@@ -38,11 +38,11 @@
     },
     "installed_packages": [
       {
-        "name": "simple_portfolio",
-        "source_url": "https://github.com/lachdoug/simple_portfolio",
+        "name": "normans_site",
+        "source_url": "https://github.com/lachdoug/normans_site",
         "destination": "./",
         "extraction_command": "git",
-        "path_to_extracted": "simple_portfolio"
+        "path_to_extracted": "normans_site"
       }
     ],
     "service_configurations": [

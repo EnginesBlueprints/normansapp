@@ -16,7 +16,7 @@
         "patch": 0
       }
     },
-    "timestamp": "2018-02-08T18:00:04+11:00"
+    "timestamp": "2018-02-08T18:48:18+11:00"
   },
   "software": {
     "base": {
@@ -53,7 +53,7 @@
           "engine_path": "persistent",
           "permissions": "rw",
           "volume_src": "",
-          "service_name": "_Engines_Builder(engine_name)",
+          "service_name": "persistent",
           "group": "_Engines_Builder(data_gid)",
           "user": "_Engines_Builder(data_uid)"
         }
@@ -67,7 +67,8 @@
     ],
     "persistent_directories": [
       {
-        "path": "/home/app/config"
+        "path": "/home/app/config",
+        "volume_name": "persistent"
       }
     ]
   }

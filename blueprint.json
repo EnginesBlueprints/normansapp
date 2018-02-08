@@ -16,7 +16,7 @@
         "patch": 0
       }
     },
-    "timestamp": "2018-02-08T19:22:40+11:00"
+    "timestamp": "2018-02-08T19:44:09+11:00"
   },
   "software": {
     "base": {
@@ -33,7 +33,7 @@
     "scripts": {
       "start": {
         "language": "sh",
-        "content": "#!/bin/bash\r\ncd /home/app\r\ngit pull\r\nrake bundle exec\r\nruby start.rb\r\nsleep 600\r\n"
+        "content": "#!/bin/bash\r\n\r\ncd /home/app\r\ngit pull\r\n\r\nPID_FILE=/home/engines/run/app.pid\r\nexport PID_FILE\r\n. /home/engines/functions/trap.sh\r\n\r\nthin -p 8000 start &\r\necho $! > /home/engines/run/app.pid\r\nstartup_complete\r\n\r\n\r\nwait\r\nexit_code=$?\r\n\t\r\nshutdown_complete"
       }
     },
     "installed_packages": [
@@ -57,6 +57,12 @@
           "group": "_Engines_Builder(data_gid)",
           "user": "_Engines_Builder(data_uid)"
         }
+      }
+    ],
+    "template_files": [
+      {
+        "path": "/home/app",
+        "content": "require File.expand_path   '/home/app/rbuy.rb', __FILE__\r\nrun Sinatra::Application"
       }
     ],
     "file_write_permissions": [

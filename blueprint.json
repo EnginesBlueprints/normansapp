@@ -16,7 +16,7 @@
         "patch": 0
       }
     },
-    "timestamp": "2018-02-08T19:44:09+11:00"
+    "timestamp": "2018-02-08T20:44:18+11:00"
   },
   "software": {
     "base": {
@@ -33,7 +33,7 @@
     "scripts": {
       "start": {
         "language": "sh",
-        "content": "#!/bin/bash\r\n\r\ncd /home/app\r\ngit pull\r\n\r\nPID_FILE=/home/engines/run/app.pid\r\nexport PID_FILE\r\n. /home/engines/functions/trap.sh\r\n\r\nthin -p 8000 start &\r\necho $! > /home/engines/run/app.pid\r\nstartup_complete\r\n\r\n\r\nwait\r\nexit_code=$?\r\n\t\r\nshutdown_complete"
+        "content": "#!/bin/bash\r\n\r\ncd /home/app\r\ngit pull\r\n\r\nPID_FILE=/home/engines/run/app.pid\r\nexport PID_FILE\r\n. /home/engines/functions/trap.sh\r\n\r\nruby start.rb -o 0.0.0.0 -p 8000 &\r\n\r\necho $! > /home/engines/run/app.pid\r\nstartup_complete\r\n\r\n\r\nwait\r\nexit_code=$?\r\n\t\r\nshutdown_complete"
       }
     },
     "installed_packages": [

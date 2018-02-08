@@ -16,7 +16,7 @@
         "patch": 0
       }
     },
-    "timestamp": "2018-02-08T19:11:36+11:00"
+    "timestamp": "2018-02-08T19:22:40+11:00"
   },
   "software": {
     "base": {
@@ -53,7 +53,7 @@
           "engine_path": "persistent",
           "permissions": "rw",
           "volume_src": "",
-          "service_name": "persistent",
+          "service_name": "config",
           "group": "_Engines_Builder(data_gid)",
           "user": "_Engines_Builder(data_uid)"
         }

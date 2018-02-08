@@ -16,7 +16,7 @@
         "patch": 0
       }
     },
-    "timestamp": "2018-02-08T18:48:18+11:00"
+    "timestamp": "2018-02-08T19:11:36+11:00"
   },
   "software": {
     "base": {
@@ -33,7 +33,7 @@
     "scripts": {
       "start": {
         "language": "sh",
-        "content": "#!/bin/bash\r\ncd /home/app\r\ngit pull\r\nrake bundle exec\r\n"
+        "content": "#!/bin/bash\r\ncd /home/app\r\ngit pull\r\nrake bundle exec\r\nruby start.rb\r\nsleep 600\r\n"
       }
     },
     "installed_packages": [
